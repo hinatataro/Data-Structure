@@ -38,9 +38,8 @@ void StackList::Push(int x){
     }
 
     StackNode *newnode = new StackNode(x);  // 這行代碼創建了一個新的 StackNode 對象，數據部分 data 被初始化為 x，next 被初始化為 nullptr（或 0）。
-    newnode->next = top;     // 這行代碼將新節點的 next 指標設置為當前的 top。也就是說，新節點的 next 現在指向了原來的棧頂節點。這樣做的目的是保持鏈接，確保新的棧頂節點連接到原來的節點上。               
-//    StackNode *newnode = new StackNode(x,top);
-    top = newnode; // 這行代碼將 top 更新為新節點，這樣新節點就成為了新的棧頂。
+    newnode->next = top;                    // 這行代碼將新節點的 next 指標設置為當前的 top。也就是說，新節點的 next 現在指向了原來的棧頂節點。這樣做的目的是保持鏈接，確保新的棧頂節點連接到原來的節點上。
+    top = newnode;                          // 這行代碼將 top 更新為新節點，這樣新節點就成為了新的棧頂。
     size++;
 }
 
